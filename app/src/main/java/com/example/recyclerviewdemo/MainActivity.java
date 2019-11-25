@@ -1,6 +1,7 @@
 package com.example.recyclerviewdemo;
 
 import androidx.appcompat.app.AppCompatActivity;
+import androidx.recyclerview.widget.DividerItemDecoration;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -23,12 +24,9 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycle_view);
 
         List<String> list = new ArrayList<String>();
-        list.add("Welcome to");
+        list.add("Welcome to vhhjgjhggghjjhgjhgjhghgjhgjhgjhgjhg jhghjgjhg jhghgjhgjghgjghgjhghjghjghjgjh");
         list.add("Android!!");
 
-        System.out.println(list);
-
-        System.out.println("List......");
 
         adapter = new DemoAdapter(list);
 
@@ -36,6 +34,8 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setLayoutManager(layoutManager);
         recyclerView.setHasFixedSize(true);
         recyclerView.setAdapter(adapter);
+//        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
+
         adapter.notifyDataSetChanged();
     }
 }

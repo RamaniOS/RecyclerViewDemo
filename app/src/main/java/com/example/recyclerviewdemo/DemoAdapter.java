@@ -1,5 +1,6 @@
 package com.example.recyclerviewdemo;
 
+import android.provider.Settings;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -33,10 +34,14 @@ public class DemoAdapter extends RecyclerView.Adapter<DemoAdapter.DemoViewHolder
     }
 
     @Override
-    public void onBindViewHolder(@NonNull DemoViewHolder holder, int position) {
-        System.out.println("I am called......");
-        System.out.println(position);
+    public void onBindViewHolder(@NonNull DemoViewHolder holder, final int position) {
         holder.textView.setText(items.get(position));
+        holder.itemView.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                System.out.println(items.get(position));
+            }
+        });
     }
 
     @Override
