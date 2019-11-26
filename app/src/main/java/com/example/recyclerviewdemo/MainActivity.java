@@ -24,8 +24,13 @@ public class MainActivity extends AppCompatActivity {
         recyclerView = findViewById(R.id.recycle_view);
 
         List<String> list = new ArrayList<String>();
-        list.add("Welcome to vhhjgjhggghjjhgjhgjhghgjhgjhgjhgjhg jhghjgjhg jhghgjhgjghgjghgjhghjghjghjgjh");
+        list.add("Welcome");
         list.add("Android!!");
+        list.add("iOS!!");
+        list.add("Java");
+        list.add("Swift");
+        list.add("Kotlin");
+        list.add("Bye");
 
 
         adapter = new DemoAdapter(list);
@@ -36,6 +41,6 @@ public class MainActivity extends AppCompatActivity {
         recyclerView.setAdapter(adapter);
 //        recyclerView.addItemDecoration(new DividerItemDecoration(this, LinearLayoutManager.VERTICAL));
 
-        adapter.notifyDataSetChanged();
+        //adapter.notifyDataSetChanged();
     }
 }
