@@ -14,7 +14,6 @@ public class MainActivity extends AppCompatActivity {
 
     private RecyclerView recyclerView;
     private  DemoAdapter adapter;
-    private String[] items;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
